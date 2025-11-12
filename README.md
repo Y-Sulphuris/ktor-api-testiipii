@@ -26,7 +26,8 @@ Ktor-api-testiipii/
 ```
 
 Скриншот с выплонеными тестами:<br>
-[тут он будет]
+<img width="772" height="184" alt="image" src="https://github.com/user-attachments/assets/7805a084-7e61-4a5d-bb48-9211bb442141" />
+
 
 Для тестов использовался тестовый пользователь, так же известный как собирательный персонаж admin admin:
 ```json
@@ -204,9 +205,9 @@ curl -X POST "http://localhost:8080/products" \
 -H "Authorization: Bearer <access_token>" \
 -H "Content-Type: application/json" \
 -d '{
-  "name": "Laptop",
-  "description": "Gaming laptop",
-  "price": 999.99
+  "name": "Car",
+  "description": "Sportcar",
+  "price": 1399.99
 }'
 ```
 #### Возможные ответы:
@@ -214,9 +215,9 @@ curl -X POST "http://localhost:8080/products" \
 ```json
 {
   "id": 1,
-  "name": "Laptop",
-  "description": "Gaming laptop",
-  "price": 999.99
+  "name": "Car",
+  "description": "Sportcar",
+  "price": 1399.99
 }
 ```
 - отсутствует название или некорректная цена (`400`)
@@ -225,7 +226,7 @@ curl -X POST "http://localhost:8080/products" \
 
 ### Получение списка продуктов
 ```bash
-curl -X GET "http://localhost:8080/products?name=laptop"
+curl -X GET "http://localhost:8080/products?name=Car"
 ```
 #### Возможные ответы:
 - Успех (`200`)
@@ -233,9 +234,9 @@ curl -X GET "http://localhost:8080/products?name=laptop"
 [
   {
     "id": 1,
-    "name": "Laptop",
-    "description": "Gaming laptop",
-    "price": 999.99
+    "name": "Car",
+    "description": "Sportcar",
+    "price": 1399.99
   }
 ]
 ```
@@ -251,9 +252,9 @@ curl -X GET "http://localhost:8080/products/1"
 ```json
 {
   "id": 1,
-  "name": "Laptop",
-  "description": "Gaming laptop",
-  "price": 999.99
+  "name": "Car",
+  "description": "Sportcar",
+  "price": 1399.99
 }
 ```
 - продукт не найден (`404`)
@@ -266,7 +267,7 @@ curl -X PUT "http://localhost:8080/products/1" \
 -H "Authorization: Bearer <access_token>" \
 -H "Content-Type: application/json" \
 -d '{
-  "name": "Gaming Laptop",
+  "name": "Sportcar",
   "price": 1099.99
 }'
 ```
@@ -316,9 +317,9 @@ curl -X POST "http://localhost:8080/orders" \
   "items": [
     {
       "productId": 1,
-      "productName": "Laptop",
+      "productName": "Car",
       "quantity": 2,
-      "price": 999.99,
+      "price": 1399.99,
       "total": 1999.98
     }
   ],
