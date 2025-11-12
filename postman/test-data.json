@@ -1,0 +1,23 @@
+[
+  {
+    "name": "John Smith",
+    "email": "john@example.com",
+    "password": "p@ssw0rd!",
+    "expected_status_code": 201,
+    "test_case": "Valid data creation"
+  },
+  {
+    "name": "Ivan Vasilyevich",
+    "email": "i.v.bunsha@example.com",
+    "password": "p@ssw0rd!",
+    "expected_status_code": 201,
+    "test_case": "Valid data creation 2"
+  },
+  {
+    "name": "оператор смотри я черешня",
+    "email": "то что имя неправильное всем пофиг да",
+    "password": "123",
+    "expected_status_code": 400,
+    "test_case": "All fields are required"
+  }
+]
